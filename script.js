@@ -148,6 +148,15 @@ secretInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') save();
 });
 
-if (localStorage.getItem(STORAGE_KEY)) {
+function loadFromURL() {
+    const path = window.location.pathname.replace(/^\/|\/$/g, '');
+    return path || null;
+}
+
+const urlKey = loadFromURL();
+if (urlKey) {
+    localStorage.setItem(STORAGE_KEY, urlKey);
+    showCode();
+} else if (localStorage.getItem(STORAGE_KEY)) {
     showCode();
 }
