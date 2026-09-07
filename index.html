@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2FA Live</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>2FA Live</h1>
+
+        <div id="input-section">
+            <label for="secret">Enter Secret Key (Base32)</label>
+            <input type="text" id="secret" placeholder="JBSWY3DPEHPK3PXP" autocomplete="off" spellcheck="false">
+            <button id="save-btn">Generate</button>
+        </div>
+
+        <div id="code-section" class="hidden">
+            <div id="code-display">------</div>
+            <div id="countdown">
+                <div id="countdown-bar"></div>
+                <span id="countdown-text">30s</span>
+            </div>
+            <button id="clear-btn">Clear</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

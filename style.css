@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0a0a0a;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 18px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    background: #0d0d0d;
+    border: 2px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4ade80;
+}
+
+input::placeholder {
+    color: #444;
+    letter-spacing: 1px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #4ade80;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background: #22c55e;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#clear-btn {
+    background: #333;
+    color: #888;
+}
+
+#clear-btn:hover {
+    background: #444;
+    color: #fff;
+}
+
+#code-section {
+    margin-top: 8px;
+}
+
+#code-display {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: 12px;
+    color: #4ade80;
+    padding: 24px 0;
+    user-select: all;
+}
+
+#countdown {
+    position: relative;
+    height: 32px;
+    background: #0d0d0d;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+#countdown-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #4ade80, #22c55e);
+    border-radius: 16px;
+    transition: width 1s linear;
+}
+
+#countdown-text {
+    position: relative;
+    z-index: 1;
+    line-height: 32px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    border-color: #ef4444 !important;
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 16px;
+        padding: 24px;
+    }
+
+    #code-display {
+        font-size: 48px;
+        letter-spacing: 8px;
+    }
+}
